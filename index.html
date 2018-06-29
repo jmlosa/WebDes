@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rei's Cosplay Profile</title>
+	<link rel="icon" href="assets/site-icon.ico">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+<body>
+	<div class="top">
+		<div id="main">
+			<div id="logo">
+				<center><a href="home.html"><img id="centerimg" src="assets/logo.jpg"></a></center>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+			<div class="slideshow-container">
+				<a href="gallery.html">
+					<div class="mySlides fade">
+					  <img src="assets/slideshow/img1.jpg" style="width:100%">
+					  <div class="text">Kid from Chrono Cross<br>Photo by: Eyestrain Photoworks</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="assets/slideshow/img2.jpg" style="width:100%">
+					  <div class="text">King from Nanatsu no Taizai<br>Photo by: Chiisu Studio</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="assets/slideshow/img3.jpg" style="width:100%">
+					  <div class="text">Touka Kirishima from Tokyo Ghoul<br>Photo by: Marvin Reyes</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="assets/slideshow/img4.jpg" style="width:100%">
+					  <div class="text">Djeeta from Granblue Fantasy<br>Photo by: Kei Avuenalliv</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="assets/slideshow/img5.jpg" style="width:100%">
+					  <div class="text">Flandre Scarlet from Touhou Project<br>Photo by: Chiisu Studio</div>
+					</div>
+				</a>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+
+				
+		</div>
+	</div>
+
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+		<span class="dot" onclick="currentSlide(4)"></span> 
+		<span class="dot" onclick="currentSlide(5)"></span> 
+	</div>
+
+	<footer>
+		All material copyright by Jessa Mae Losa. All rights reserved. (chos lang po hehe)
+	</footer>
+
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+
+</body>
+</html>
